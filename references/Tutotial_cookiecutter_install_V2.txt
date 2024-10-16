@@ -1,0 +1,54 @@
+Ver: https://cookiecutter-data-science.drivendata.org/#with-pipx-recommended
+
+paso uno: instalar git en windows
+https://gitforwindows.org/
+
+paso dos: Ejecutar consola Anaconda powershell prompt
+
+paso tres: instalar cookie-cutter
+https://cookiecutter-data-science.drivendata.org/
+https://cookiecutter-data-science.drivendata.org/
+
+Ejecutar: 
+
+antes de ejecutar el comando del paso 1 ver si la ruta es correcta
+en mi caso es--> c:/users/lenovo>
+
+1- Ejecutamos: pip install cookiecutter-data-science 
+
+2- esperar un buen rato, tarda!!!!!!
+
+3- Ejecutamos: cookiecutter https://github.com/drivendata/cookiecutter-data-science
+
+ccds https://github.com/drivendata/cookiecutter-data-science
+
+
+4- Respondemos las preguntas
+1-8 project_name: Practicas_Profesionalizantes_2_2024
+2-8 repo_name: Practicas_Profesionalizantes_2_2024
+3-8 author_name: Federico D'Oliveira
+4-8 description: El objetivo principal de este proyecto es aplicar técnicas de Aprendizaje Automático para analizar y predecir la oferta hotelera y parahotelera en Ushuaia.
+
+5-8 Select open_source_license: 1MIT
+6-8 s3_bucket: ENTER
+7-8 aws_profile: ENTER
+8-8 Select python_interpreter: 1 python3
+
+--------------------
+DEPRECATION WARNING ***
+
+Cookiecutter data science is moving to v2 soon, which will entail using
+the command `ccds ...` rather than `cookiecutter ...`. The cookiecutter command
+will continue to work, and this version of the template will still be available.
+To use the legacy template, you will need to explicitly use `-c v1` to select it.
+
+Please update any scripts/automation you have to append the `-c v1` option,
+which is available now.
+
+For example:
+    cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
+-------------------
+
+
+
+
