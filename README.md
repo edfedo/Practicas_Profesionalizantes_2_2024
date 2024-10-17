@@ -17,6 +17,8 @@
 
 [-] **Subject:** Practicas Profesionalizantes 2 / Professional Internship 2
 
+[-] **Company for internships:** BGH. https://bgh.com.ar/ (Islas Malvinas 2815, V9420 Río Grande, Tierra del Fuego)
+
 [-] **Year:** 2024
 
 <p align="center">
