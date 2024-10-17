@@ -32,6 +32,14 @@
 
 [-] **Developed by:** Team Practicas Profesionalizantes 2
 
+| Full Name - GuitHub User |
+| :------------- | 
+| Anabella Buccino
+| Abuccino|
+| What are the seasonal patterns in the supply of available places in the hotel and parahotel sector of Ushuaia?
+| Purpose: Identify periods of high and low demand to optimize resource management and strategic planning.|
+
+
 Anabella Buccino: Abuccino
 Alejandro Maclean: Alemac22
 Federido D'Oliveira: edfedo
