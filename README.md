@@ -3,7 +3,7 @@
 
 ------------
 
-![Ushuaia_TIerra_Del_Fuego](https://github.com/edfedo/Practicas_Profesionalizantes_2_2024/blob/main/reports/figures/Front.png)
+![Ushuaia_TIerra_Del_Fuego](https://github.com/edfedo/Practicas_Profesionalizantes_2_2024/blob/main/reports/figures/front_c.png)
 
 <p align="left">
     <a href="https://www.lonelyplanet.com/argentina/tierra-del-fuego/ushuaia">
