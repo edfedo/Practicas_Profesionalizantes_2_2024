@@ -15,7 +15,7 @@
 
 [-] **Institution:** Politécnico Malvinas Argentinas.  https://politecnico.tdf.gob.ar/
 
-[-] **Subject:** Aprendizaje Automático / Machine Learning
+[-] **Subject:** Practicas Profesionalizantes 2 / Professional Internship 2
 
 [-] **Year:** 2024
 
@@ -28,11 +28,16 @@
 
 ------------
 
-[-] **cookiecutter.project:** Plazas Disponibles Hotelero / Available Places Hotelier
+[-] **cookiecutter.project:** Practicas Profesionalizantes 2 / Professional Internship 2
 
-[-] **Developed by:** Federico D'Oliveira
+[-] **Developed by:** Team Practicas Profesionalizantes 2
 
-[-] **Project support:** Martin Mirabete
+Anabella Buccino: Abuccino
+Alejandro Maclean: Alemac22
+Federido D'Oliveira: edfedo
+Jonatan Suarez: JSuarez-Arg
+
+[-] **Project support:** Nicolas Caballero / Martin Mirabete / Federico Magaldi
 
 [-] **Project video:**
 
