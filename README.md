@@ -14,7 +14,7 @@
 
 [-] **Institution:** Politécnico Malvinas Argentinas  https://politecnico.tdf.gob.ar/
 
-[-] **Subject:** Practicas Profesionalizantes 2 / Professional Internship 2
+[-] **Subject:** Practicas Profesionalizantes 2 / Professional Practices 2
 
 [-] **Company for internships:** BGH https://bgh.com.ar/
 
@@ -31,7 +31,7 @@
 
 ------------
 
-[-] **cookiecutter.project:** Practicas Profesionalizantes 2 / Professional Internship 2
+[-] **cookiecutter.project:** Practicas Profesionalizantes 2 / Professional Practices 2
 
 [-] **Developed by:** Team Practicas Profesionalizantes 2
 
