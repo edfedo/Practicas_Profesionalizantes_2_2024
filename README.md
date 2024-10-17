@@ -1,4 +1,3 @@
-
 ![Ushuaia_TIerra_Del_Fuego](https://github.com/edfedo/Practicas_Profesionalizantes_2_2024/blob/main/reports/figures/Front_b.jpg)
 
 ------------
@@ -19,7 +18,7 @@
 
 [-] **Company for internships:** BGH https://bgh.com.ar/
 
-[-] **Company Adress:** Islas Malvinas 2815, V9420 Río Grande, Tierra del Fuego
+[-] **Company Adress:** Islas Malvinas 2815, V9420 Río Grande, Tierra del Fuego - Argentina
 
 [-] **Year:** 2024
 
