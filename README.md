@@ -35,12 +35,10 @@
 | Name       | GitHub User      |
 | ------------- | ------------- |
 | [-] Anabella Buccino | [-] Abuccino |
+| [-] Alejandro Maclean | [-] Alemac22 |
+| [-] Federido D'Oliveira | [-] edfedo |
+| [-] Jonatan Suarez | [-] JSuarez-Arg |
 
-
-Anabella Buccino: Abuccino
-Alejandro Maclean: Alemac22
-Federido D'Oliveira: edfedo
-Jonatan Suarez: JSuarez-Arg
 
 [-] **Project support:** Nicolas Caballero / Martin Mirabete / Federico Magaldi
 
