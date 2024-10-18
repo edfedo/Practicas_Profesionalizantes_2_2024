@@ -43,7 +43,14 @@
 | Jonatan Suarez | JSuarez-Arg |
 
 
-[-] **Project support:** Nicolas Caballero / Martin Mirabete / Federico Magaldi
+[-] **Project support:**
+
+| Name       | Matter      |
+| ------------- | ------------- |
+| Nicolas Caballero | Practicas Profesionalizantes 2 |
+| Martin Mirabete | Desarrollo de Sistema de IA |
+| Federico Magaldi | Comunicación, Tecnología, Sociedad y Relaciones Laborales |
+| Silvana Paez | Procesamiento del Habla |
 
 [-] **Project video:**
 
