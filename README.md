@@ -52,16 +52,6 @@
 | Federico Magaldi | Comunicación, Tecnología, Sociedad y Relaciones Laborales |
 | Silvana Paez | Procesamiento del Habla |
 
-[-] **Project video:**
-
-- Por favor usar vlc para ver el video, o actualizar codecs en caso de no poder verlo o escuchar el sonido (Sigue el link y click View raw, esto descargara el video)
-
-<p align="left">
-    <a href="https://github.com/edfedo/Plazas_Disponibles_Hotelero/blob/main/references/Video_TP_V2_simplescreenrecorder-2024-07-18_00.21.25.mp4">
-    <img src="https://img.shields.io/badge/Link_Project_Hotelero_Video-277D24?style=for-the-badge&logo=github&logoColor=white" alt="Project" />
-  </a>
-</p>
-
 ------------
 
 [-] **cookiecutter.description:**
