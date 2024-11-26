@@ -31,7 +31,7 @@
 
 ------------
 
-[-] **cookiecutter.project:** Practicas Profesionalizantes 2 / Professional Practices 2
+[-] **cookiecutter.project:** Practicas Profesionalizantes 2
 
 [-] **Developed by:** Team Practicas Profesionalizantes 2
 
