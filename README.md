@@ -70,15 +70,16 @@
 
 | Practicas Profesionalizantes 2 - Placas BGH |
 | ------------- | 
-| [-]  Este estudio explora los patrones estacionales y factores influyentes en la disponibilidad de plazas en el sector hotelero y parahotelero de Ushuaia, Argentina, con el objetivo de mejorar la gestión de recursos y la planificación estratégica. Se utilizaron datos históricos que abarcan variables como el número de establecimientos, habitaciones disponibles y eventos festivos. Mediante técnicas de aprendizaje automático, incluyendo Random Forest, Árboles de Decisión, Regresión Logística y Máquinas de Vectores de Soporte (SVC), se construyeron y compararon modelos predictivos para anticipar la demanda de plazas. Los datos fueron preprocesados para asegurar la consistencia y calidad, incluyendo la conversión de nombres de meses a inglés y la verificación de la integridad de los datos numéricos. Se utilizó un calendario de feriados argentinos para añadir una variable que identificara días festivos, mejorando así la capacidad predictiva de los modelos. Se entrenó un modelo de Random Forest para predecir las plazas altas basado en las características seleccionadas. **Métricas obtenidas: Accuracy: 97.33% Precision: 97.44% Recall: 97.44% F1 Score: 97.44%** Los resultados indican que Random Forest proporciona predicciones altamente precisas, destacándose en la identificación de períodos de alta demanda en el sector turístico de Ushuaia. Este enfoque predictivo ofrece una herramienta valiosa para la planificación proactiva y la optimización de la oferta, contribuyendo a una gestión más eficiente y estratégica de los recursos hoteleros y parahoteleros. | 
+| [-] Objetivo del Estudio
+El propósito de este estudio es desarrollar un sistema automatizado basado en visión por computadora para detectar componentes faltantes en placas electrónicas de la empresa BGH. Utilizando un modelo YOLOv8, se busca optimizar los procesos de control de calidad y reducir los errores humanos en la inspección visual. Este enfoque mejora la eficiencia de la línea de producción al identificar de forma precisa y rápida los defectos en las placas. | 
 
 ------------
 
 [-] **Dataset:** 
 
-| Español       | English       |
-| ------------- | ------------- |
-| [-] El mismo fue obtenido desde la web del Instituto Provincial de Analisis E Investigacion, Estadistica y Censos | [-] It was obtained from the website of the Provincial Institute of Analysis and Research, Statistics and Censuses.|
+| Español       |   
+| ------------- |
+| [-] El mismo fue obtenido desde la web del Instituto Provincial de Analisis E Investigacion, Estadistica y Censos |
 
 <p align="left">
     <a href="https://ipiec.tierradelfuego.gob.ar">
@@ -95,9 +96,10 @@
 
 [-] **Dataset Description:**
 
-| Español       | English       |
-| ------------- | ------------- |
-| [-] Descripción completa del dataset, incluyendo la cantidad de instancias, características (columnas), tipos de datos, y cualquier información relevante. | [-] Complete description of the dataset, including the number of instances, features (columns), data types, and any information relevant.|
+| Español       |
+| ------------- |
+| [-] Descripción completa del dataset, incluyendo la cantidad de instancias, características (columnas), tipos de datos, y cualquier información relevante.|
+
 
 <p align="left">
     <a href="https://github.com/edfedo/Plazas_Disponibles_Hotelero/blob/main/docs/descripcion_datos.md">
@@ -202,58 +204,14 @@ Análisis Exploratorio de Datos (EDA)
 
 **Predicciones de Oferta:** Modelos predictivos que puedan estimar la disponibilidad futura de plazas y habitaciones.
 
-------------
-
-[-] **Different Stages of the Project:**
-
-[-] **Data Extraction and Preparation Methodology:**
-
-**Data Extraction:** Data was extracted from a file and converted to a pandas DataFrame.
-
-**Preprocessing:** Includes converting the Period column to a date format, handling null values, and scaling the data if necessary.
-Exploratory Data Analysis (EDA)
-
-**Data Visualization:** Use of graphs to understand the distribution of variables.
-
-**Descriptive Statistics:** Calculation of means, medians, standard deviations and other relevant statistics.
-
-**Correlation:** Analysis of the correlation between the different variables to identify important relationships.
-
-[-] **Predictive Modeling**
-
-**Model Selection:** Choosing suitable machine learning models, such as linear regression, decision trees or neural networks.
-
-**Model Training:** Split the data into training and test sets, and train the models using the training set.
-
-**Model Evaluation:** Measure model performance using appropriate metrics such as MAE, MSE, RMSE or R2.
-
-[-] **Optimization and Validation**
-
-**Hyperparameter Optimization:** Adjustment of the model's hyperparameters to improve its performance.
-
-**Cross Validation:** Use of cross validation techniques to ensure that the model generalizes well to unseen data.
-
-[-] **Interpretation and Communication of Results**
-
-**Interpretation of Results:** Analysis of the results obtained to extract significant conclusions.
-
-**Results Visualization:** Presentation of the results through clear and understandable graphs and visualizations.
-
-**Final Report:** Preparation of a detailed report summarizing the findings and recommendations based on the analysis.
-
-[-] **Expected results**
-
-**Seasonal Patterns:** Identification of seasonal patterns in the hotel and parahotel offer.
-
-**Supply Predictions:** Predictive models that can estimate the future availability of places and rooms.
 
 ------------
 
 [-] **Results: Plazas Disponibles Hotelero / Available Places Hotelier**
 
-| Español       | English       |
-| ------------- | ------------- |
-| [-] Descripción completa de los resultados. | [-] Complete description of the results.|
+| Español       |
+| ------------- |
+| [-] Descripción completa de los resultados. |
 
 <p align="left">
     <a href="https://github.com/edfedo/Plazas_Disponibles_Hotelero/blob/main/reports/Reporte%20de%20Resultados.md">
