@@ -69,53 +69,66 @@
 | Practicas Profesionalizantes 2 - Placas BGH |
 | ------------- | 
 | [-] Objetivo del Estudio
-El propósito de este estudio es desarrollar un sistema automatizado basado en visión por computadora para detectar componentes faltantes en placas electrónicas de la empresa BGH. Utilizando un modelo YOLOv8, se busca optimizar los procesos de control de calidad y reducir los errores humanos en la inspección visual. Este enfoque mejora la eficiencia de la línea de producción al identificar de forma precisa y rápida los defectos en las placas. | 
+El propósito de este estudio es desarrollar un sistema automatizado basado en visión por computadora (Fotos) para detectar componentes faltantes en placas electrónicas de la empresa BGH. Utilizando un modelo YOLOv8, se busca optimizar los procesos de control de calidad y reducir los errores humanos en la inspección visual. Este enfoque mejora la eficiencia de la línea de producción al identificar de forma precisa y rápida los defectos en las placas. | 
 
 ------------
 
 [-] **Dataset:** 
 
-| Español       |   
+| BGH      |   
 | ------------- |
-| [-] El mismo fue obtenido desde la web del Instituto Provincial de Analisis E Investigacion, Estadistica y Censos |
+| [-] El mismo fue obtenido de forma directa por medio de la empresa BGH |
 
-<p align="left">
-    <a href="https://ipiec.tierradelfuego.gob.ar">
-    <img src="https://img.shields.io/badge/Link_WEB_IPIEC-FFA500?style=for-the-badge&logo=Google-chrome&logoColor=white" alt="Link WEB IPIEC" />
-  </a>
-</p>
+Metodología
 
-<p align="left">
-    <a href="https://ipiec.tierradelfuego.gob.ar/estadisticas-economicas-2/">
-    <img src="https://img.shields.io/badge/Link_WEB_IPIEC_DATASET-4285F4?style=for-the-badge&logo=Google-chrome&logoColor=white" alt="Link WEB IPIEC DATASET" />
-  </a>
-</p>
+[-] 1. Preparación de los Datos
+   
+Se utilizó un conjunto de datos de imágenes de placas electrónicas proporcionado por BGH, que incluye imágenes anotadas con etiquetas para los componentes presentes en las placas. Los pasos clave fueron:
+
+Montaje de Google Drive: El almacenamiento en Google Drive permitió acceder y procesar los datos directamente en la nube.
+
+Organización del Dataset:
+
+Las imágenes fueron separadas en carpetas para entrenamiento y validación.
+Se utilizó la función train_test_split para dividir el conjunto de datos en un 90% para entrenamiento y un 10% para validación, asegurando una distribución representativa.
+Gestión de Archivos Faltantes: Se implementó un control de errores para identificar y manejar casos donde las imágenes o etiquetas estuvieran ausentes, garantizando la calidad de los datos procesados.
+
+[-] 2. Entrenamiento del Modelo
+
+El modelo YOLOv8 (versión mediana, yolov8m.pt) fue entrenado utilizando los siguientes parámetros:
+
+Tarea: Detección de objetos.
+
+Número de Épocas: 50 épocas con un criterio de paciencia para detenerse si no se observan mejoras en 5 épocas consecutivas.
+
+Resolución de Imágenes: 960 píxeles.
+
+Tamaño del Lote: 16 imágenes.
+
+Dataset: Configurado mediante un archivo YAML que especifica las rutas y clases del conjunto de datos.
+
+[-] 3. Validación del Modelo
+
+Posteriormente, se evaluó el modelo entrenado utilizando el conjunto de validación para medir su capacidad de detección en un entorno controlado.
 
 
 [-] **Dataset Description:**
 
-| Español       |
+| BGH     |
 | ------------- |
-| [-] Descripción completa del dataset, incluyendo la cantidad de instancias, características (columnas), tipos de datos, y cualquier información relevante.|
+| [-] Resultados|
 
 
-<p align="left">
-    <a href="https://github.com/edfedo/Plazas_Disponibles_Hotelero/blob/main/docs/descripcion_datos.md">
-    <img src="https://img.shields.io/badge/Link_Docs_descripcion_datos-F37626?style=for-the-badge&logo=github&logoColor=white" alt="Link" />
-  </a>
-</p>
+El entrenamiento del modelo YOLOv8 produjo los siguientes resultados preliminares:
 
-<p align="left">
-    <a href="https://github.com/edfedo/Plazas_Disponibles_Hotelero/blob/main/references/Origen%20y%20descripcion%20datos%20archivos%20Oferta%20Hotelera.md">
-    <img src="https://img.shields.io/badge/Link_Reference_origen_descripcion_datos_oferta_hotelera-F37626?style=for-the-badge&logo=github&logoColor=white" alt="Link" />
-  </a>
-</p>
+[-] Métricas de Entrenamiento:
 
-<p align="left">
-    <a href="https://github.com/edfedo/Plazas_Disponibles_Hotelero/tree/main/data/external">
-    <img src="https://img.shields.io/badge/Link_Excel_CSV_DataSets-217346?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-</p>
+El modelo mostró una convergencia estable, alcanzando valores óptimos en las métricas de pérdida (loss) para detección de objetos y clasificación.
+
+[-] Validación:
+
+El modelo logró identificar con alta precisión los componentes faltantes en las placas electrónicas.
+Las métricas de desempeño (por ejemplo, precisión promedio - mAP) serán utilizadas para evaluar su eficacia.
 
 ------------
 
