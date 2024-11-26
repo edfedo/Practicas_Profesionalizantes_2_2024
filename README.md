@@ -56,8 +56,6 @@
 
 - Por favor usar vlc para ver el video, o actualizar codecs en caso de no poder verlo o escuchar el sonido (Sigue el link y click View raw, esto descargara el video)
 
-- Please use vlc to see the video, or update codecs if you cannot see it or hear the sound (Follow the link and click View raw, this will download the video)
-
 <p align="left">
     <a href="https://github.com/edfedo/Plazas_Disponibles_Hotelero/blob/main/references/Video_TP_V2_simplescreenrecorder-2024-07-18_00.21.25.mp4">
     <img src="https://img.shields.io/badge/Link_Project_Hotelero_Video-277D24?style=for-the-badge&logo=github&logoColor=white" alt="Project" />
