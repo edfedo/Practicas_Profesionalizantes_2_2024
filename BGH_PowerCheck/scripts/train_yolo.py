@@ -10,7 +10,7 @@ def main():
         imgsz=640,            # Tamaño de las imágenes
         save=True,            # Asegura que los pesos se guarden
         save_period=1,        # Guarda los pesos después de cada época
-        project="C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/runs/detect", # Carpeta de salida
+        project="C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect", # Carpeta de salida
         #name='cable_detector'
         name='placa_detector'
     )
