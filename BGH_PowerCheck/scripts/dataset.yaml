@@ -1,7 +1,12 @@
 # dataset.yaml
 
-train: C:\Practicas_Profesionalizantes_2_2024\Practicas_2_2024_BGH\fotos etiquetadas\YOLODataset\images\train
-val: C:\Practicas_Profesionalizantes_2_2024\Practicas_2_2024_BGH\fotos etiquetadas\YOLODataset\images\val
+
+train: C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/dataset/train/images  # Ruta relativa al conjunto de entrenamiento
+val:  C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/dataset/val/images      # Ruta relativa al conjunto de validación
+
+
+#train: C:\Practicas_Profesionalizantes_2_2024\Practicas_2_2024_BGH\fotos etiquetadas\YOLODataset\images\train
+#val: C:\Practicas_Profesionalizantes_2_2024\Practicas_2_2024_BGH\fotos etiquetadas\YOLODataset\images\val
 
 nc: 13
 
