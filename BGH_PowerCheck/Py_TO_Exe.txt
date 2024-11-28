@@ -1,0 +1,34 @@
+https://www.youtube.com/watch?v=dwXW2x7JPx8&t=300s
+
+Crear #instalador de proyecto #python - Convertir de .py a .exe - Exportar
+
+-------------------------
+
+1- Instalar auto-py-to-exe con Python
+
+python -m pip install auto-py-to-exe
+
+2- ejecuta el siguiente comando para asegurarte de instalarlo:
+
+python -m ensurepip --upgrade
+
+3- Para asegurarte de que todo está configurado correctamente:
+
+python -m auto_py_to_exe
+
+-------------------------
+
+Con la consola abierta:
+
+Script Location: C:/Users/lenovo/Desktop/BGH_PowerCheck/camera.py
+
+Onefile: un directorio
+
+Console Window: Hide the console
+
+Icono: POR AHORA NO (en caso de tener guardar en la misma carpeta)
+
+Additional files: TODOS
+
+
+
