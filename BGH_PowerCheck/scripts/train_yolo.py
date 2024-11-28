@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 
 def main():
-    model = YOLO('C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/yolov8m.pt')  # Carga el modelo YOLO
+    model = YOLO('C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/yolov8m.pt')  # Carga el modelo YOLO
     model.train(
         #data='dataset.yaml',  # Archivo de configuración del dataset
         data='C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/dataset.yaml',
