@@ -1,0 +1,6 @@
+train: C:/Practicas_Profesionalizantes_2_2024/Practicas_2_2024_BGH/fotos etiquetadas/YOLODataset/images/train/
+val: C:/Practicas_Profesionalizantes_2_2024/Practicas_2_2024_BGH/fotos etiquetadas/YOLODataset/images/val/
+
+nc: 13
+
+names: ['SW 1', 'CN 19', 'CN 12', 'CN 15', 'C 251', 'CN 14', 'N IN 1', 'CN 18', 'C 498', 'C 497', 'C 259', 'C 496', 'NTC 1']
