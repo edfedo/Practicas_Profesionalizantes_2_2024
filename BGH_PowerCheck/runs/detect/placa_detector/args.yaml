@@ -13,7 +13,7 @@ cache: false
 device: null
 workers: 8
 project: runs/detect
-name: cable_detector
+name: placa_detector
 exist_ok: false
 pretrained: true
 optimizer: auto
@@ -103,4 +103,4 @@ erasing: 0.4
 crop_fraction: 1.0
 cfg: null
 tracker: botsort.yaml
-save_dir: runs\detect\cable_detector
+save_dir: runs\detect\placa_detector
