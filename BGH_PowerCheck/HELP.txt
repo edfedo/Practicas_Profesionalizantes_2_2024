@@ -1,0 +1,29 @@
+------------------------
+------------------------
+
+(-) activar entorno:
+
+(-) Navegar a la carpeta del proyecto: Ve a la carpeta donde deseas crear el entorno virtual. Usa el comando cd para cambiar de directorio, por ejemplo:
+
+cd C:\ruta\de\tu\proyecto
+
+(-) Crear el entorno virtual: Ejecuta el siguiente comando para crear un entorno virtual llamado bnv:
+
+python -m venv bnv
+
+(-) Activar el entorno virtual: Una vez creado, activa el entorno virtual usando el siguiente comando según tu sistema operativo:
+
+.\bnv\Scripts\activate
+
+(-) Instalar dependencias necesarias: Una vez activado el entorno virtual, instala las dependencias necesarias, por ejemplo:
+
+pip install ultralytics opencv-python
+
+(-) Instalar las dependencias
+
+Usa el siguiente comando para instalar las dependencias listadas en el archivo requirements.txt (el que esta dentro de la carpeta BGH_PowerCheck):
+
+pip install -r requirements.txt
+
+------------------------
+------------------------
