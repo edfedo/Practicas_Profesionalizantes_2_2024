@@ -11,13 +11,13 @@ from database import crear_bd  # Asumiendo que tienes funciones para la base de 
 
 #MODEL_PATH = "scripts/runs/detect/cable_detector/weights/best.pt"
 MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect/placa_detector2/weights/best.pt"
-#EXPECTED_CONNECTIONS = {
-#    "Posicion1": "Amarillo",
-#    "Posicion2": "Rojo",
-#    "Posicion3": "Negro",
-#    "Posicion4": "Azul",
-#    "Posicion5": "Marron"
-#}
+EXPECTED_CONNECTIONS = {
+    "Posicion1": "Amarillo",
+    "Posicion2": "Rojo",
+    "Posicion3": "Negro",
+    "Posicion4": "Azul",
+    "Posicion5": "Marron"
+}
 detener_camara = False  # Variable global para detener la cámara
 
 # Validar conexiones detectadas
