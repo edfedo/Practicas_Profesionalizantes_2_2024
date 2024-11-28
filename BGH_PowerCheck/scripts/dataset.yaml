@@ -1,12 +1,19 @@
 # dataset.yaml
 
-train: D:\CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE\Practica-profecionalizantes-2\Sistema-BGH-Cable-Detection\BGH_PowerCheck\datasets\train\images  # Ruta relativa al conjunto de entrenamiento
-val: D:\CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE\Practica-profecionalizantes-2\Sistema-BGH-Cable-Detection\BGH_PowerCheck\datasets\val\images      # Ruta relativa al conjunto de validación
+train: C:\Practicas_Profesionalizantes_2_2024\Practicas_2_2024_BGH\fotos etiquetadas\YOLODataset\images\train
+val: C:\Practicas_Profesionalizantes_2_2024\Practicas_2_2024_BGH\fotos etiquetadas\YOLODataset\images\val
+
+nc: 13
+
+names: ['SW 1', 'CN 19', 'CN 12', 'CN 15', 'C 251', 'CN 14', 'N IN 1', 'CN 18', 'C 498', 'C 497', 'C 259', 'C 496', 'NTC 1']
+
+#train: D:\CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE\Practica-profecionalizantes-2\Sistema-BGH-Cable-Detection\BGH_PowerCheck\datasets\train\images  # Ruta relativa al conjunto de entrenamiento
+#val: D:\CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE\Practica-profecionalizantes-2\Sistema-BGH-Cable-Detection\BGH_PowerCheck\datasets\val\images      # Ruta relativa al conjunto de validación
 #test: D:\CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE\Practica-profecionalizantes-2\Sistema-BGH-Cable-Detection\BGH_PowerCheck\datasets\test\images    # Ruta relativa al conjunto de prueba
 
-names:
-  0: Amarillo_Posicion1
-  1: Rojo_Posicion2
-  2: Negro_Posicion3
-  3: Azul_Posicion4
-  4: Marron_Posicion5
+#names:
+#  0: Amarillo_Posicion1
+#  1: Rojo_Posicion2
+#  2: Negro_Posicion3
+#  3: Azul_Posicion4
+#  4: Marron_Posicion5

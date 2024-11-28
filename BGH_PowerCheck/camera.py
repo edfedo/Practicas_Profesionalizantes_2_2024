@@ -8,7 +8,11 @@ from threading import Thread
 from database import crear_bd  # Asumiendo que tienes funciones para la base de datos
 
 # Configuración global
-MODEL_PATH = "scripts/runs/detect/cable_detector/weights/best.pt"
+
+# ARREGLAR ESTO NO PUEDE QDAR ASI ES SOLO UN TEST
+
+#MODEL_PATH = "scripts/runs/detect/cable_detector/weights/best.pt"
+MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/Practicas_2_2024_BGH/notebooks/runs/detect/train10/weights/best.pt"
 EXPECTED_CONNECTIONS = {
     "Posicion1": "Amarillo",
     "Posicion2": "Rojo",

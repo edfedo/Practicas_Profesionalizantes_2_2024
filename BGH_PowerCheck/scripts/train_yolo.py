@@ -5,7 +5,7 @@ def main():
     model.train(
         data='dataset.yaml',  # Archivo de configuración del dataset
         epochs=100,            # Número de épocas
-        batch=16,             # Tamaño del batch
+        batch=1,             # Tamaño del batch
         imgsz=640,            # Tamaño de las imágenes
         save=True,            # Asegura que los pesos se guarden
         save_period=1,        # Guarda los pesos después de cada época

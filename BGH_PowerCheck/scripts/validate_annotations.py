@@ -22,7 +22,8 @@ def validate_annotations(label_dir, num_classes):
 
 # Configuración
 num_classes = 5  # Número de clases (debe coincidir con dataset.yaml)
-base_path = "D:/CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE/Practica-profecionalizantes-2/Sistema-BGH-Cable-Detection/BGH_PowerCheck/datasets"
+#base_path = "D:/CIENCIA-DE-DATOS-IA-4TO-CUATRIMESTRE/Practica-profecionalizantes-2/Sistema-BGH-Cable-Detection/BGH_PowerCheck/datasets"
+base_path = "C:/Practicas_Profesionalizantes_2_2024/Practicas_2_2024_BGH/fotos etiquetadas/YOLODataset/dataset"
 
 # Validar anotaciones
 for split in ["train", "val", "test"]:
