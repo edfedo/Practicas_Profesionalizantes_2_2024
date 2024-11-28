@@ -27,5 +27,14 @@ Usa el siguiente comando para instalar las dependencias listadas en el archivo r
 
 pip install -r requirements.txt
 
+------
+
+(-) Si ya tenes todos los pasos anteriores ejecutados, solo tenes que activar el entorno
+
+C:\Practicas_Profesionalizantes_2_2024\BGH_PowerCheck
+
+.\bnv\Scripts\activate
+
+------
 ------------------------
 ------------------------
