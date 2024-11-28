@@ -20,7 +20,8 @@ python -m venv bnv
 pip install ultralytics opencv-python
 
 (-) Instalar las dependencias
-Usa el siguiente comando para instalar las dependencias listadas en el archivo requirements.txt:
+
+Usa el siguiente comando para instalar las dependencias listadas en el archivo requirements.txt (el que esta dentro de la carpeta BGH_PowerCheck):
 
 pip install -r requirements.txt
 
