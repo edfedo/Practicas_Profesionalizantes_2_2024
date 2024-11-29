@@ -6,7 +6,7 @@ from threading import Thread
 from database import crear_bd
 
 # Ruta del modelo YOLO
-MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect/placa_detector200_google_colab/weights/best.pt"
+MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect/placa_detector315_google_colab/weights/best.pt"
 
 # Componentes esperados
 COMPONENT_NAMES = [
@@ -81,18 +81,20 @@ def iniciar_camara():
                     # Dibujar rectángulo en componentes detectados
                     if cls in EXPECTED_COMPONENTS:
                         cv2.rectangle(frame, (int(x1), int(y1)), (int(x2), int(y2)), (0, 255, 0), 2)  # Verde para detectados
-                        cv2.putText(frame, EXPECTED_COMPONENTS[cls], (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1, cv2.LINE_AA)
+                        cv2.putText(frame, EXPECTED_COMPONENTS[cls], (int(x1), int(y1) - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
                 # Validar componentes
                 detected, missing = validate_components(detections)
                 y_offset = 20  # Margen superior para el texto
 
                 if not missing:
-                    cv2.putText(frame, "Todos los componentes están presentes.", (10, y_offset + 25), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+                    # Mensaje de éxito con texto blanco
+                    cv2.putText(frame, "Todos los componentes están presentes.", (10, y_offset + 25), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
                 else:
-                    cv2.putText(frame, "Componentes faltantes:", (10, y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
+                    # Mensaje de faltantes con texto blanco
+                    cv2.putText(frame, "Componentes faltantes:", (10, y_offset), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
                     for idx, error in enumerate(missing):
-                        cv2.putText(frame, f"- {error}", (10, y_offset + 15 * (idx + 1)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1, cv2.LINE_AA)
+                        cv2.putText(frame, f"- {error}", (10, y_offset + 15 * (idx + 1)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1, cv2.LINE_AA)
 
                 annotated_frame = results[0].plot()
             except Exception as e:
@@ -119,13 +121,25 @@ def mostrar_menu():
     menu.title("BGH Placas Ctrl - Menu Principal")
     menu.geometry("600x400")
 
-    btn_iniciar_cam = tk.Button(menu, text="Iniciar Cámara", font=("Arial", 14), command=iniciar_camara)
-    btn_iniciar_cam.pack(pady=10)
+    # Calcular posiciones para centrar los botones
+    btn_width = 200  # Ancho aproximado del botón
+    btn_height = 50  # Altura aproximada del botón
+    window_width = 600
+    window_height = 400
+    btn_x = (window_width - btn_width) // 2  # Coordenada X centrada
+    btn1_y = (window_height // 2) - 60  # Coordenada Y para el primer botón
+    btn2_y = (window_height // 2) + 20  # Coordenada Y para el segundo botón
 
+    # Botón para iniciar cámara
+    btn_iniciar_cam = tk.Button(menu, text="Iniciar Cámara", font=("Arial", 14), command=iniciar_camara)
+    btn_iniciar_cam.place(x=btn_x, y=btn1_y, width=btn_width, height=btn_height)
+
+    # Botón para cerrar sesión
     btn_cerrar_sesion = tk.Button(menu, text="Cerrar Sesión y Salir", font=("Arial", 14), command=lambda: cerrar_sesion(menu))
-    btn_cerrar_sesion.pack(pady=20)
+    btn_cerrar_sesion.place(x=btn_x, y=btn2_y, width=btn_width, height=btn_height)
 
     menu.mainloop()
+
 
 # Función de cerrar sesión
 def cerrar_sesion(menu):
