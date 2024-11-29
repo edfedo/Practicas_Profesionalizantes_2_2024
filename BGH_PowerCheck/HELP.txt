@@ -1,11 +1,22 @@
 ------------------------
 ------------------------
+Requerimiento:
+
+[-] GitDesktop: https://desktop.github.com/download/
+
+[-] VSCode: https://code.visualstudio.com/
+
+[-] Git for Windows: https://git-scm.com/downloads/win
+
+[-] Anaconda: https://www.anaconda.com/download
 
 (-) activar entorno:
 
 (-) Navegar a la carpeta del proyecto: Ve a la carpeta donde deseas crear el entorno virtual. Usa el comando cd para cambiar de directorio, por ejemplo:
 
 cd C:\ruta\de\tu\proyecto
+
+ejecutar simbolo de sistemas como administrador el de Conda - Anaconda Promp (Inicio Windows --> Barra buscar --> cmd (click derecho ejecutar como admin)) 
 
 C:\Practicas_Profesionalizantes_2_2024\BGH_PowerCheck
 
