@@ -127,11 +127,11 @@ def mostrar_menu():
     btn_iniciar_cam = tk.Button(menu, text="Iniciar Camara", font=("Arial", 14), command=iniciar_camara)
     btn_iniciar_cam.pack(pady=10)
 
-    btn_fallidos = tk.Button(menu, text="Registros Fallidos", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
-    btn_fallidos.pack(pady=10)
+    #btn_fallidos = tk.Button(menu, text="Registros Fallidos", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
+    #btn_fallidos.pack(pady=10)
 
-    btn_correctos = tk.Button(menu, text="Detecciones Correctas", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
-    btn_correctos.pack(pady=10)
+    #btn_correctos = tk.Button(menu, text="Detecciones Correctas", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
+    #btn_correctos.pack(pady=10)
 
     btn_cerrar_sesion = tk.Button(menu, text="Cerrar Sesión y Salir", font=("Arial", 14), command=lambda: cerrar_sesion(menu))
     btn_cerrar_sesion.pack(pady=20)
