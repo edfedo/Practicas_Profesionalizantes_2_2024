@@ -38,14 +38,28 @@ def iniciar_camara():
     # Crear ventana para la cámara
     cam_window = tk.Toplevel()
     cam_window.title("BGH Placas - Ctrl Camara")
-    cam_window.geometry("400x200")
+    cam_window.geometry("400x300")  # Ajustar la ventana a 400x300
+
+    # Crear un canvas para el fondo con texto "BGH"
+    canvas = tk.Canvas(cam_window, width=400, height=300)
+    canvas.pack(fill="both", expand=True)
+
+    # Dibujar el patrón "BGH" en el fondo
+    for y in range(0, 300, 50):  # Espaciado vertical del texto
+        for x in range(0, 400, 100):  # Espaciado horizontal del texto
+            canvas.create_text(x, y, text="BGH", font=("Arial", 20), fill="#cccccc", anchor="nw")
+
+    # Crear un frame transparente sobre el canvas para colocar botones
+    frame = tk.Frame(cam_window, bg="white", highlightthickness=2, highlightbackground="white")
+    frame.place(relx=0.5, rely=0.5, anchor="center", width=300, height=200)
 
     def detener_desde_boton():
         global detener_camara
         detener_camara = True
         cam_window.destroy()
 
-    btn_detener = Button(cam_window, text="Detener Camara", font=("Arial", 16), command=detener_desde_boton)
+    # Botón para detener la cámara
+    btn_detener = Button(frame, text="Detener Camara", font=("Arial", 16), command=detener_desde_boton)
     btn_detener.pack(pady=40)
 
     # Hilo para procesar video
@@ -115,31 +129,34 @@ def iniciar_camara():
     Thread(target=procesar_video).start()
     cam_window.mainloop()
 
-# Menú principal
+# Menú principal con fondo "BGH"
 def mostrar_menu():
     menu = tk.Tk()
     menu.title("BGH Placas Ctrl - Menu Principal")
-    menu.geometry("600x400")
+    menu.geometry("400x300")  # Ajustar la ventana a 400x300
 
-    # Calcular posiciones para centrar los botones
-    btn_width = 200  # Ancho aproximado del botón
-    btn_height = 50  # Altura aproximada del botón
-    window_width = 600
-    window_height = 400
-    btn_x = (window_width - btn_width) // 2  # Coordenada X centrada
-    btn1_y = (window_height // 2) - 60  # Coordenada Y para el primer botón
-    btn2_y = (window_height // 2) + 20  # Coordenada Y para el segundo botón
+    # Crear un canvas para el fondo
+    canvas = tk.Canvas(menu, width=400, height=300)
+    canvas.pack(fill="both", expand=True)
 
-    # Botón para iniciar cámara
-    btn_iniciar_cam = tk.Button(menu, text="Iniciar Cámara", font=("Arial", 14), command=iniciar_camara)
-    btn_iniciar_cam.place(x=btn_x, y=btn1_y, width=btn_width, height=btn_height)
+    # Dibujar el patrón "BGH" en el fondo
+    for y in range(0, 300, 50):  # Espaciado vertical del texto
+        for x in range(0, 400, 100):  # Espaciado horizontal del texto
+            canvas.create_text(x, y, text="BGH", font=("Arial", 20), fill="#cccccc", anchor="nw")
+
+    # Crear un frame transparente sobre el canvas para colocar botones
+    frame = tk.Frame(menu, bg="white", highlightthickness=2, highlightbackground="white")
+    frame.place(relx=0.5, rely=0.5, anchor="center", width=300, height=200)
+
+    # Botón para iniciar la cámara
+    btn_iniciar_cam = tk.Button(frame, text="Iniciar Cámara", font=("Arial", 14), command=iniciar_camara)
+    btn_iniciar_cam.pack(pady=20)
 
     # Botón para cerrar sesión
-    btn_cerrar_sesion = tk.Button(menu, text="Cerrar Sesión y Salir", font=("Arial", 14), command=lambda: cerrar_sesion(menu))
-    btn_cerrar_sesion.place(x=btn_x, y=btn2_y, width=btn_width, height=btn_height)
+    btn_cerrar_sesion = tk.Button(frame, text="Cerrar Sesión y Salir", font=("Arial", 14), command=lambda: cerrar_sesion(menu))
+    btn_cerrar_sesion.pack(pady=10)
 
     menu.mainloop()
-
 
 # Función de cerrar sesión
 def cerrar_sesion(menu):
@@ -157,24 +174,37 @@ def validate_login():
     else:
         messagebox.showerror("Error", "Credenciales Incorrectas")
 
-# Crear ventana de login
+# Crear ventana de login con fondo "BGH"
 root = tk.Tk()
 root.title("BGH Placas Ctrl - Login")
 root.geometry("400x300")
 
-label_user = tk.Label(root, text="Usuario", font=("Arial", 14))
-label_user.pack(pady=10)
-entry_user = tk.Entry(root, font=("Arial", 14), width=20)
-entry_user.pack(pady=10)
+# Crear un canvas para el fondo
+canvas = tk.Canvas(root, width=400, height=300)
+canvas.pack(fill="both", expand=True)
 
-label_pass = tk.Label(root, text="Contraseña", font=("Arial", 14))
-label_pass.pack(pady=10)
-entry_pass = tk.Entry(root, show="*", font=("Arial", 14), width=20)
-entry_pass.pack(pady=10)
+# Dibujar un patrón de texto "BGH" en el fondo
+for y in range(0, 300, 50):  # Espaciado vertical del texto
+    for x in range(0, 400, 100):  # Espaciado horizontal del texto
+        canvas.create_text(x, y, text="BGH", font=("Arial", 20), fill="#cccccc", anchor="nw")
 
-btn_login = tk.Button(root, text="Iniciar Sesión", font=("Arial", 14), command=validate_login)
+# Crear frame para los campos de entrada
+frame = tk.Frame(root, bg="white", highlightthickness=2, highlightbackground="white")
+frame.place(relx=0.5, rely=0.5, anchor="center", width=300, height=200)
+
+# Campos de entrada
+label_user = tk.Label(frame, text="Usuario", font=("Arial", 12))
+label_user.pack(pady=5)
+entry_user = tk.Entry(frame, font=("Arial", 12))
+entry_user.pack(pady=5)
+
+label_pass = tk.Label(frame, text="Contraseña", font=("Arial", 12))
+label_pass.pack(pady=5)
+entry_pass = tk.Entry(frame, show="*", font=("Arial", 12))
+entry_pass.pack(pady=5)
+
+# Botón de login
+btn_login = tk.Button(frame, text="Iniciar Sesión", font=("Arial", 14), command=validate_login)
 btn_login.pack(pady=20)
 
-# Inicializar la base de datos
-crear_bd()
 root.mainloop()
