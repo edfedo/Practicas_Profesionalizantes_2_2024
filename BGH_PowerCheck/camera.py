@@ -11,7 +11,7 @@ from database import crear_bd  # Asumiendo que tienes funciones para la base de 
 
 #MODEL_PATH = "scripts/runs/detect/cable_detector/weights/best.pt"
 #MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect/placa_detector2/weights/best.pt"
-MODEL_PATH = "E:/detect/placa_detector80/weights/best.pt"
+MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect/placa_detector200_google_colab/weights/best.pt"
 
 EXPECTED_CONNECTIONS = {
     "Posicion1": "Amarillo",
