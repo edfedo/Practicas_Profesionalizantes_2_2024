@@ -2,45 +2,35 @@ import cv2
 from ultralytics import YOLO
 import tkinter as tk
 from tkinter import messagebox, Button
-from PIL import Image, ImageTk  # Para manejar imágenes en formatos adicionales como JPG
-
 from threading import Thread
-from database import crear_bd  # Asumiendo que tienes funciones para la base de datos
+from database import crear_bd
 
-# Configuración global
-
-#MODEL_PATH = "scripts/runs/detect/cable_detector/weights/best.pt"
-#MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect/placa_detector2/weights/best.pt"
+# Ruta del modelo YOLO
 MODEL_PATH = "E:/detect/placa_detector80/weights/best.pt"
 
-EXPECTED_CONNECTIONS = {
-    "Posicion1": "Amarillo",
-    "Posicion2": "Rojo",
-    "Posicion3": "Negro",
-    "Posicion4": "Azul",
-    "Posicion5": "Marron"
-}
+# Componentes esperados
+COMPONENT_NAMES = [
+    'SW 1', 'CN 19', 'CN 12', 'CN 15', 'C 251', 
+    'CN 14', 'N IN 1', 'CN 18', 'C 498', 'C 497', 
+    'C 259', 'C 496', 'NTC 1'
+]
+EXPECTED_COMPONENTS = {idx: name for idx, name in enumerate(COMPONENT_NAMES)}
+
 detener_camara = False  # Variable global para detener la cámara
 
-# Validar conexiones detectadas
-def validate_connections(detections):
+# Validar detecciones
+def validate_components(detections):
     """
-    Valida las conexiones detectadas.
-    Retorna True si todo está correcto, de lo contrario retorna una lista de errores.
+    Valida que todos los componentes esperados estén presentes.
+    Retorna True si todo está correcto, de lo contrario una lista de errores.
     """
     errors = []
-    connected_positions = {detection['position']: detection['color'] for detection in detections}
+    detected_classes = [detection['class'] for detection in detections]
 
-    for position, expected_color in EXPECTED_CONNECTIONS.items():
-        detected_color = connected_positions.get(position)
-        normalized_expected_color = expected_color.strip().lower()
-        normalized_detected_color = detected_color.strip().lower() if detected_color else None
+    for idx, component_name in EXPECTED_COMPONENTS.items():
+        if idx not in detected_classes:
+            errors.append(f"{component_name}: Faltante.")
 
-        if detected_color is None:
-            errors.append(f"{position}: No debe estar Vacia, y debe ser {expected_color}.")
-        elif normalized_detected_color != normalized_expected_color:
-            errors.append(f"{position}: {detected_color} no es valido, debe ser {expected_color}.")
-    
     return True if not errors else errors
 
 # Función para iniciar la cámara
@@ -73,7 +63,7 @@ def iniciar_camara():
 
         cap = cv2.VideoCapture(0)
         if not cap.isOpened():
-            print("Error: No se pudo abrir la camara.")
+            print("Error: No se pudo abrir la cámara.")
             return
 
         while not detener_camara:
@@ -88,15 +78,14 @@ def iniciar_camara():
 
                 for result in results[0].boxes.data.tolist():
                     x1, y1, x2, y2, confidence, cls = result
-                    color_name = list(EXPECTED_CONNECTIONS.values())[int(cls)]
-                    detections.append({"position": f"Posicion{int(cls)+1}", "color": color_name})
+                    detections.append({"class": int(cls)})
 
-                # Validar conexiones
-                validation_result = validate_connections(detections)
+                # Validar componentes
+                validation_result = validate_components(detections)
                 y_offset = 20  # Margen superior para el texto
 
                 if validation_result is True:
-                    cv2.putText(frame, "Conexion Correcta", (10, y_offset + 25), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 2, cv2.LINE_AA)
+                    cv2.putText(frame, "Todos los componentes están presentes.", (10, y_offset + 25), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 2, cv2.LINE_AA)
                 else:
                     for idx, error in enumerate(validation_result):
                         cv2.putText(frame, error, (10, y_offset + 5 + 15 * idx), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 255), 1, cv2.LINE_AA)
@@ -126,14 +115,8 @@ def mostrar_menu():
     menu.title("BGH Placas Ctrl - Menu Principal")
     menu.geometry("600x400")
 
-    btn_iniciar_cam = tk.Button(menu, text="Iniciar Camara", font=("Arial", 14), command=iniciar_camara)
+    btn_iniciar_cam = tk.Button(menu, text="Iniciar Cámara", font=("Arial", 14), command=iniciar_camara)
     btn_iniciar_cam.pack(pady=10)
-
-    #btn_fallidos = tk.Button(menu, text="Registros Fallidos", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
-    #btn_fallidos.pack(pady=10)
-
-    #btn_correctos = tk.Button(menu, text="Detecciones Correctas", font=("Arial", 14), command=lambda: messagebox.showinfo("Registros", "Funcionalidad en desarrollo"))
-    #btn_correctos.pack(pady=10)
 
     btn_cerrar_sesion = tk.Button(menu, text="Cerrar Sesión y Salir", font=("Arial", 14), command=lambda: cerrar_sesion(menu))
     btn_cerrar_sesion.pack(pady=20)
