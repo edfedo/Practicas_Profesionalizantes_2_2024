@@ -28,6 +28,12 @@ python -m venv bnv
 
 .\bnv\Scripts\activate
 
+En caso de tener problemas para activar por politicas de seguridad:
+
+Set-ExecutionPolicy Bypass -Scope Process -Force
+
+\bnv\Scripts\activate
+
 (-) Instalar dependencias necesarias: Una vez activado el entorno virtual, instala las dependencias necesarias, por ejemplo:
 
 pip install ultralytics opencv-python
