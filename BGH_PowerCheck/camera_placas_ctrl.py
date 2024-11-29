@@ -6,7 +6,8 @@ from threading import Thread
 from database import crear_bd
 
 # Ruta del modelo YOLO
-MODEL_PATH = "E:/detect/placa_detector315_google_colab/weights/best.pt"
+#MODEL_PATH = "E:/detect/placa_detector315_google_colab/weights/best.pt"
+MODEL_PATH = "C:/Practicas_Profesionalizantes_2_2024/BGH_PowerCheck/scripts/runs/detect/placa_detector315_google_colab/weights/best.pt"
 
 # Componentes esperados
 COMPONENT_NAMES = [
