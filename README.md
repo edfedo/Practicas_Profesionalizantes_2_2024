@@ -89,11 +89,11 @@ El modelo YOLOv8 (versión mediana, yolov8m.pt) fue entrenado utilizando los sig
 
 Tarea: Detección de objetos.
 
-Número de Épocas: 50 épocas con un criterio de paciencia para detenerse si no se observan mejoras en 5 épocas consecutivas.
+Número de Épocas: 300 épocas con un criterio de paciencia para detenerse si no se observan mejoras en 5 épocas consecutivas.
 
 Resolución de Imágenes: 960 píxeles.
 
-Tamaño del Lote: 16 imágenes.
+Tamaño del Lote: 100 imágenes.
 
 Dataset: Configurado mediante un archivo YAML que especifica las rutas y clases del conjunto de datos.
 
