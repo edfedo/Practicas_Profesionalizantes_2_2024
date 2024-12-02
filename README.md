@@ -47,9 +47,7 @@
 
 | Name       | Matter      |
 | ------------- | ------------- |
-| Nicolas Caballero | Practicas Profesionalizantes 2 |
-| Martin Mirabete | Desarrollo de Sistema de IA |
-| Federico Magaldi | Comunicación, Tecnología, Sociedad y Relaciones Laborales |
+| Politécnico Malvinas Argentinas | Practicas Profesionalizantes 2 |
 
 ------------
 
